@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">D - Money</string>
+    <string name="action_settings">Settings</string>
+    <string name="login">로그인</string>
+    <string name="whereused">사용처</string>
+    <string name="usedprice">사용 금액</string>
+    <string name="useddate">사용 일자</string>
+    <string name="memo">적요(메모)</string>
+    <string name="member">계정</string>
+    <string name="receipt">영수증</string>
+    <string name="status">상태</string>
+    <string name="require">경비 신청</string>
+    <string name="detail">상세 보기</string>
+
+    <string name="common_text_confirm">확인</string>
+    <string name="common_text_error">오류</string>
+
+</resources>

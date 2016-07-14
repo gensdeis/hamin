@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Management_View"/>
+        <activity android:name=".List"/>
         <activity android:name=".SetView"/>
         <activity
             android:name=".MainActivity"

@@ -34,7 +34,7 @@ public class SetView extends AppCompatActivity {
         listview.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
-                Intent man = new Intent(SetView.this, Management_View.class);
+                Intent man = new Intent(SetView.this, List.class);
                 startActivity(man);
 
             }

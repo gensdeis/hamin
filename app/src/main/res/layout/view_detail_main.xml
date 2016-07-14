@@ -40,6 +40,7 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -178,11 +179,10 @@
         android:layout_height="0dp"
         android:layout_weight="120">
 
-        <Spinner
-            android:id="@+id/spinner1"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:spinnerMode="dropdown"/>
+            android:layout_height="match_parent"
+            android:text="복리후생비"/>
 
     </LinearLayout>
 
@@ -197,7 +197,8 @@
             android:layout_height="match_parent"
             android:text="@string/receipt"
             android:textColor="#000"
-            android:textSize="15dp"/>
+            android:textSize="15dp"
+                />
 
     </LinearLayout>
 

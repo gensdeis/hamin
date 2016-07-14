@@ -1,14 +1,18 @@
 package uc.daelim.com.dmoney;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class SetView extends AppCompatActivity {
     TextView setid;
     TextView setpwd;
+    TextView listview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,17 @@ public class SetView extends AppCompatActivity {
 
         setid.setText(idd);
         setpwd.setText(pwdd);
+
+        listview = (TextView) findViewById(R.id.tv1);
+
+        listview.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+
+                Intent man = new Intent(SetView.this, Management_View.class);
+                startActivity(man);
+
+            }
+        });
 
 
     }

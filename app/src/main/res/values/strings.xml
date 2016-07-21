@@ -9,5 +9,10 @@
     <string name="member">계정</string>
     <string name="receipt">영수증</string>
     <string name="status">상태</string>
+    <string name="require">경비 신청</string>
+    <string name="detail">상세 보기</string>
+
+    <string name="common_text_confirm">확인</string>
+    <string name="common_text_error">오류</string>
 
 </resources>

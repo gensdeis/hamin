@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#fff">
     <!-- title bar -->
     <FrameLayout
         android:layout_width="match_parent"
@@ -10,13 +11,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             layout="@layout/toolbar_layout"/>
-        <ImageView
-            android:id="@+id/iv_RightButton"
-            android:src="@android:drawable/ic_menu_save"
-            android:padding="10dp"
-            android:layout_gravity="right|center_vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
     </FrameLayout>
 
     <ScrollView
@@ -40,10 +34,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/whereused"
-                    android:textColor="#5CD1E5"
+                    android:text="@string/status"
+                    android:textColor="#000"
                     android:textSize="15dp"/>
 
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/deny"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -54,12 +60,10 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="스타벅스 종로점"
+                    android:hint="@string/whereused"
                     android:textColorHint="#5CD1E5"
-                    android:textSize="15dp"
-                    android:inputType="text"/>
+                    android:textSize="15dp"/>
             </android.support.design.widget.TextInputLayout>
-
 
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="15dp"
@@ -82,7 +86,6 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="0"
                     android:gravity="right"
                     android:textColorHint="#000"
                     android:textSize="15dp"
@@ -108,7 +111,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/requiredate"
+                    android:id="@+id/detaildate"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="2016 - 07 - 05"
@@ -116,20 +119,6 @@
                     android:textColorHint="#000"
                     android:textSize="15dp"
                     android:inputType="date"/>
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/memo"
-                    android:textColor="#000"
-                    android:textSize="15dp"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -140,7 +129,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint=" TOKYO"
+                    android:hint="@string/memo"
                     android:gravity="left"
                     android:textColorHint="#000"
                     android:textSize="15dp"

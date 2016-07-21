@@ -2,9 +2,11 @@ package uc.daelim.com.dmoney;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
@@ -25,6 +27,8 @@ import java.net.SocketTimeoutException;
 import java.net.URL;
 import java.util.logging.Logger;
 
+import uc.daelim.com.dmoney.common.ErrorUtils;
+
 public class MainActivity extends AppCompatActivity {
     Button login;
     EditText id;
@@ -37,12 +41,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        try {
+
+            setContentView(R.layout.activity_main);
+
+            addToolBar();
+
+        } catch (Exception e) {
+            ErrorUtils.AlertException(this, getString(R.string.error_msg_default_with_activity), e);
+        }
 
         CONTEXT = this;
         login = (Button) findViewById(R.id.login);
-        setid = (TextView)findViewById(R.id.setid);
-        setpwd = (TextView)findViewById(R.id.setpwd);
 
         login.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -50,10 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 pwd = (EditText)findViewById(R.id.pwd);
                 String str = id.getText().toString();
                 String str2 = pwd.getText().toString();
-
-//                Toast.makeText(MainActivity.this, "ID : " + str, Toast.LENGTH_LONG).show();
-//                Toast.makeText(MainActivity.this, "PWD : " + str2, Toast.LENGTH_LONG).show();
-
 
 
                 if(str.equals("123")) {
@@ -70,6 +77,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void addToolBar() throws Exception {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar);
+        toolbar.setTitle(R.string.login);
+        toolbar.setTitleTextColor(Color.WHITE);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 
     @Override
@@ -181,14 +197,14 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     if(result.equals("success")) {
 
-                        id = (EditText)findViewById(R.id.id);
-                        pwd = (EditText)findViewById(R.id.pwd);
-                        String str = id.getText().toString();
-                        String str2 = pwd.getText().toString();
+//                        id = (EditText)findViewById(R.id.id);
+//                        pwd = (EditText)findViewById(R.id.pwd);
+//                        String str = id.getText().toString();
+//                        String str2 = pwd.getText().toString();
 
-                        Intent intent = new Intent(MainActivity.this, SetView.class);
-                        intent.putExtra("id", str);
-                        intent.putExtra("pwd", str2);
+                        Intent intent = new Intent(MainActivity.this, ExpenseList.class);
+//                        intent.putExtra("id", str);
+//                        intent.putExtra("pwd", str2);
                         startActivity(intent);
                     }
 

@@ -16,5 +16,6 @@ public class ExampleUnitTest {
         assertEquals(7, 2 - 2);
         assertEquals(7, 2 - 3);
         assertEquals(7, 2 - 5);
+        assertEquals(7, 2 - 6);
     }
 }

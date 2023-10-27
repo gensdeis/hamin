@@ -13,5 +13,6 @@ public class ExampleUnitTest {
         assertEquals(4, 2 + 2);
         assertEquals(5, 2 - 2);
         assertEquals(6, 2 - 2);
+        assertEquals(7, 2 - 2);
     }
 }
